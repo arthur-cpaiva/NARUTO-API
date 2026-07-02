@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: rgb(32, 0, 0);
+    padding: 15px 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(228, 3, 3);
+    ;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: lobster two;
+}
+
+.links a {
+    text-decoration: none;
+    gap: 50px;
+    padding: 1.3rem;
+    margin-left: 20px;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: rgb(228, 3, 3);
+}
+
+body {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../Imagens/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.cabecalho {
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border: 2px solid white;
+    display: block;
+    margin: 10px 30%;
+    padding: 10px;
+    background-color: brown;
+    opacity: 0.9;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.conteudo p{
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    border: 2px solid white;
+    display: block;
+    margin: 5% 30%;
+    padding: 20px;
+    background-color: brown;
+    opacity: 0.8;
+    line-height: 1.6;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
