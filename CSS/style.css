@@ -30,7 +30,7 @@ nav {
     font-family: lobster two;
 }
 
-.links a {
+.button {
     text-decoration: none;
     gap: 50px;
     padding: 1.3rem;
@@ -64,7 +64,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.conteudo p {
+.texto p {
     justify-content: center;
     text-align: center;
     color: black;
@@ -79,16 +79,16 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#personagens {
+#conteudo {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px auto;
+    padding: 20px;
     gap: 20px;
     border: 2px solid red;
 }
-
 
 .card {
     padding: 3vw;
