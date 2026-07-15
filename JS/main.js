@@ -1,8 +1,14 @@
 const conteudo = document.getElementById("conteudo");
 const personagens = document.getElementById("personagens");
 const vilas = document.getElementById("vilas");
-personagens.addEventListener("click", getPersonagem);
-vilas.addEventListener("click", getVilas);
+
+if (personagens) {
+    personagens.addEventListener("click", getPersonagem);
+}
+
+if (vilas) {
+    vilas.addEventListener("click", getVilas);
+}
 
 function getPersonagem() {
     fetch("https://dattebayo-api.onrender.com/characters")
@@ -10,21 +16,22 @@ function getPersonagem() {
         .then(data => {
             conteudo.innerHTML = "";
 
-            data.characters.forEach(personagem => {
+            data.characters.forEach(personagens => {
                 conteudo.innerHTML += `
                     <div class="card">
-                        <img src="${personagem.images[0]}" alt="${personagem.name}">
-                        <p>${personagem.name}</p>
-                        <p>${personagem.debut.manga}</p>
+                        <img src="${personagens.images[0]}" alt="${personagens.name}">
+                        <p>${personagens.name}</p>
+                        <p>${personagens.debut.manga}</p>
                         
                     </div>
                 `;
             });
         })
+        
         .catch(error => console.log(error));
 }
 
-function getVilas() {    
+function getVilas() {
     fetch("https://dattebayo-api.onrender.com/villages")
         .then(response => response.json())
         .then(data => {
@@ -41,4 +48,12 @@ function getVilas() {
             });
         })
         .catch(error => console.log(error));
+}
+
+if (window.location.pathname.includes("personagens.html")) {
+    getPersonagem();
+}
+
+if (window.location.pathname.includes("vilas.html")) {
+    getVilas();
 }
